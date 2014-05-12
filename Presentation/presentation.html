@@ -18,7 +18,7 @@
 
 <body class="impress-not-supported">
 
-   <div id="impress">
+ <div id="impress">
 
     <div id="start" class="step" data-substeps="2" data-x="0" data-y="0" data-scale="3">
         <div class="title">Monitoring Logs with Elastic Search</div>
@@ -34,66 +34,66 @@
     </div>
 
     <div id="problem" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="0">
-       <div class="title">What's the problem?</div>
-       <div>Well, problems are not detected until our customers detect them first.</div>
+     <div class="title">What's the problem?</div>
+     <div>Well, problems are not detected until our customers detect them first.</div>
+ </div>
+
+ <div id="currentScenario" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="1000">
+   <div class="title">Current Scenario:</div>
+   <div class="block">Customers encounter an issue</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>
+   <div class="block">A select few customers call into C3</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
+   <div class="block">C3 escalates to ATS</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
+   <div class="block">ATS escalates to the devs</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>    
+   <div class="block">Devs fix issue</div>
+</div>
+
+<div id="idealScenario" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="2000">
+   <div class="title">Ideal Scenario:</div>
+   <div class="block">Monitor finds an issue</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>
+   <div class="block">Appropriate team gets notified</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
+   <div class="block">Team fixes issue</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
+   <div class="block">Message can be posted on web app</div>
+   <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>    
+   <div class="block">If customer calls in, C3 has an answer</div>
+</div>
+
+<div id="currentTools" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="3000">
+   <div class="title">Current Tools: Starfield Logs</div>
+   <div>
+       <img src="images/starfield_search.png" style="width:250px"/>
+       <img src="images/starfield_details.png" style="width:250px"/>
+       <img src="images/starfield_aggregation.png" style="width:250px"/>
    </div>
+   <div style="text-align:center;"><a href="http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx" target="_blank" style="font-size:x-small;">http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx</div>
+</div>
 
-   <div id="currentScenario" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="1000">
-     <div class="title">Current Scenario:</div>
-     <div class="block">Customers encounter an issue</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>
-     <div class="block">A select few customers call into C3</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
-     <div class="block">C3 escalates to ATS</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
-     <div class="block">ATS escalates to the devs</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>    
-     <div class="block">Devs fix issue</div>
- </div>
-
- <div id="idealScenario" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="2000">
-     <div class="title">Ideal Scenario:</div>
-     <div class="block">Monitor finds an issue</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>
-     <div class="block">Appropriate team gets notified</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
-     <div class="block">Team fixes issue</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>     
-     <div class="block">Message can be posted on web app</div>
-     <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>    
-     <div class="block">If customer calls in, C3 has an answer</div>
- </div>
-
- <div id="currentTools" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="3000">
-     <div class="title">Current Tools: Starfield Logs</div>
-     <div>
-         <img src="images/starfield_search.png" style="width:250px"/>
-         <img src="images/starfield_details.png" style="width:250px"/>
-         <img src="images/starfield_aggregation.png" style="width:250px"/>
-     </div>
-     <div style="text-align:center;"><a href="http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx" target="_blank" style="font-size:x-small;">http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx</div>
- </div>
-
- <div id="problemWithTools" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="4000">
-     <div class="title">Problem with these Tools:</div>
-     <ul>
-        <li>They dont alert new issues to the team</li>
-        <li>A lot of noise to filter through</li>
-        <li>Limited filters</li>
-        <li>Cannot customize without code change</li>
-    </ul>
+<div id="problemWithTools" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="4000">
+   <div class="title">Problem with these Tools:</div>
+   <ul>
+    <li>They dont alert new issues to the team</li>
+    <li>A lot of noise to filter through</li>
+    <li>Limited filters</li>
+    <li>Cannot customize without code change</li>
+</ul>
 </div>
 
 <div id="idealSolution" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="5000">
- <div class="title">Ideal Solution:</div>
- <div>
+   <div class="title">Ideal Solution:</div>
+   <div>
     <img src="images/gliffy.png" style="width:100%"/>
 </div>
 </div>
 
 <div id="whatsOutThere" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="6000">
- <div class="title">What is out there:</div>
- <ul>
+   <div class="title">What is out there:</div>
+   <ul>
     <li>Elastic Search</li>
     <li>Log Stash</li>
     <li>Kibana</li>
@@ -105,8 +105,8 @@
 </div>
 
 <div id="ElasticSearch" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">What is Elastic Search</div>
- <ul>
+   <div class="title">What is Elastic Search:</div>
+   <ul>
     <li>Can be used as a document based NoSQL datastore, as one stop shop for storing searching and statistics</li>
     <li>Out of the box horizontally scalable</li>
     <li>Has  HTTP Rest query interface - JSON</li>
@@ -114,75 +114,100 @@
 </div>
 
 <div id="LogStash" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">What is Log Stash</div>
- <ul>
+   <div class="title">What is Log Stash:</div>
+   <ul>
     <li>A tool used to collect logs, parse them, store them for searching</li>
     <li>Works with n number of input/output, easy to configure</li>
     <li>Allows for unstructured JSON logs, creates a dynamic schema that it is good for logs</li>
 </ul>
 </div>
+<div id="LogStash" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
+   <div class="title">Log Stash:</div>
+<div><img src="images/logstash-overview.png" style="width:600px;"/></div>
+</div>
 
 <div id="Kibana" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">What is Kibana</div>
- <ul>
+   <div class="title">What is Kibana:</div>
+   <ul>
     <li>A dashboard that lets you analyze your logs</li>
     <li>Make your own dashboard using the Lucene search query</li>
     <li>Making your own dashboard</li>
 </ul>
 </div>
 
+<div id="ELKServerSetup" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
+   <div class="title">Our ELK Server Setup:</div>
+   <div style="text-align: center">
+    <img src="images/ELK_SETUP.png" style="width:1000px;"/>
+</div>
+</div>
+
+<div id="WSBMonitorAPI" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
+   <div class="title">API to push logs:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">http://wsbmonitor.int.godaddy.com/admin</a></div>
+   <div><a href="https://confluence.int.godaddy.com/display/EchoITInf/Logstash+Logging+API" target="_blank">https://confluence.int.godaddy.com/display/EchoITInf/Logstash+Logging+API</a> </div>
+</div>
+
 <div id="settingUpELK" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">Setting up ELK</div>
- <ul>
-                <li>NEED TO ADD LINK TO CONFLUENCE PAGE</li>
-            </ul>
+   <div class="title">ELK Sample App Setup:</div>
+   <ul>
+    <li>ACME Labs Sample App</li>
+    <li><a href="http://www.json-generator.com/">http://www.json-generator.com/</a>  </li>
+</ul>
 </div>
 
 <div id="creatingYourOwnDashboard" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">Creating your own Dashboard</div>
- <a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard</a>
+   <div class="title">Creating your own Dashboard:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard</a></div>
+</div>
+
+<div id="ELKPerfomance" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
+   <div class="title">Perfomance of our Setup:</div>
+   <ul>
+    <li>Load Test Demo</li>
+</ul>
 </div>
 
 <div id="WSBMonitorApp" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">WSB Monitor App</div>
-  <a href="http://wsbmonitor.int.godaddy.com/" target="_blank">http://wsbmonitor.int.godaddy.com/</a>
+   <div class="title">WSB Monitor App:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/" target="_blank">http://wsbmonitor.int.godaddy.com/</a></div>
 </div>
 
 <div id="WSBMonitorAdminApp" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">WSB  Monitor Admin App</div>
- <a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">http://wsbmonitor.int.godaddy.com/admin</a>
+   <div class="title">WSB  Monitor Admin App:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">http://wsbmonitor.int.godaddy.com/admin</a></div>
 </div>
 
 <div id="monitoringLogs" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">Monitoring Logs</div>
- <a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard</a>
+   <div class="title">Monitoring Logs:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard</a></div>
 </div>
 
 <div id="whatsNext" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">What is next</div>
- <ul>
+   <div class="title">What is next:</div>
+   <ul>
     <li>Migrate logs to Hadoop</li>
     <li>Use corporate Elastic Search</li>
     <li>Improve Dynamic Thresholds</li>
     <li>Open source Monitor App</li>
- </ul>
+</ul>
 </div>
 
 <div id="QandA" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
- <div class="title">Q &amp; A</div>
+   <div class="title">Q &amp; A:</div>
 </div>
 
 <div id="resources" class="step only-present" data-group="intro" data-x="0" data-y="1500">
-  <div class="title">Resources</div>
+  <div class="title">Resources:</div>
   <ul>
-     <li><a href="http://www.elasticsearch.org/" target="_blank">Elasticsearch.org</a> </li>
-     <li><a href="http://logstash.net/" target="_blank">Logstash.net</a></li>
-     <li><a href="http://www.elasticsearch.org/overview/kibana/" target="_blank">Kibana</a> </li>
-     <li><a href="http://www.elasticsearch.org/overview/elkdownloads/" target="_blank">ELK Stack Downloads</a></li>
-     <li><a href="http://www.manning.com/hinman/" target="_blank">ElasticSearch Book</a> </li>
-     <li><a href="https://github.secureserver.net/PC/node-pc-monitor" target="_blank">WSB Monitor App</a> </li>
-     <li><a href="https://github.com/Moollihawkja/ELKTechTalk" target="_blank">ELK Tech Talk Presentation</a></li>
- </ul>
+   <li><a href="http://www.elasticsearch.org/" target="_blank">Elasticsearch.org</a> </li>
+   <li><a href="http://logstash.net/" target="_blank">Logstash.net</a></li>
+   <li><a href="http://www.elasticsearch.org/overview/kibana/" target="_blank">Kibana</a> </li>
+   <li><a href="http://www.elasticsearch.org/overview/elkdownloads/" target="_blank">ELK Stack Downloads</a></li>
+   <li><a href="http://www.manning.com/hinman/" target="_blank">ElasticSearch Book</a> </li>
+   <li><a href="https://github.secureserver.net/PC/node-pc-monitor" target="_blank">WSB Monitor App</a> </li>
+   <li><a href="https://github.com/Moollihawkja/ELKTechTalk" target="_blank">ELK Tech Talk Presentation</a></li>
+</ul>
 </div>
 
 </div>
