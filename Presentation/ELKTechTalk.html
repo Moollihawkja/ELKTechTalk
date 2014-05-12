@@ -8,10 +8,10 @@
     <title>ELK Tech Talk</title>
     
     <meta name="description" content="A presentation on how to survive Asynchronicity in JavaScript development." />
-    <meta name="author" content="Lindsay Donaghe" />
+    <meta name="author" content="" />
 
     <link href="http://fonts.googleapis.com/css?family=Sansita+One|Alegreya:400,900" rel="stylesheet" />
-    <link href="css/GiveMeClosure.css" rel="stylesheet" />
+    <link href="css/ELKTechTalk.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -20,26 +20,87 @@
 </head>
 
 <body class="impress-not-supported">
-		<div class="hint" onclick="toggleNotes();">notes</div>
-		<div id="notes"></div>
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js.<br/> 
-	You can see most of the content of this presentation, but without the formatting and animations, it won't make much sense.</p>
-    <p>To see it as it was intended please use the latest <b><a style="text-decoration: underline;" href="https://www.google.com/intl/en/chrome/browser/?hl=en">Chrome</a></b> (preferred), <b><a style="text-decoration: underline;" href="http://www.apple.com/safari/download/">Safari</a></b> or <b><a style="text-decoration: underline;" href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a></b> browser.</p>
-	<p>To <b>support the internet becoming the best experience it can be for everyone</b>, please discontinue use of the browser you are currently using and use one of these other browsers mentioned above for all your other browsing needs as well.</p>
-</div>
-
 <div id="impress">
-	<div>Agenda</div>
+	<h1>Agenda</h1>
 	<ol>
-		<li>Problem: How do we find issues before our customers do</li>
-		<li>Why ELK? and What is it?</li>
-		<li>Setting it Up</li>
-		<li>Automating Issue discovery with a monitor</li>
-		<li>Next steps</li>
+		<li>
+			<h3>Problem: How do we find issues before our customers do</h3>
+			<h4>How we currently find issues</h4>
+			<ul>
+				<li>Buggy code is deployed that testing didn't uncover</li>
+				<li>Issues are logged in starfield, however since they are a lot noise in the logs it is hard to know if something new appeared</li>
+				<li>Customers call in with issue</li>
+				<li>APS/ATS create an Iris incident</li>
+				<li>Developer gets back with response </li>
+				<li>Developers deploy fix</li>
+			</ul>
+			<h4>Using ELK + Monitor how the process is improved</h4>
+			<ul>
+				<li>Buggy code is deployed that testing didn't uncover</li>
+				<li>Issues are logged into Elastic Search</li>
+				<li>Monitor finds issue through Adaptive Thresholding</li>
+				<li>Dev is alerted to issue</li>
+				<li>Monitor alerts ATS/ITOC of issue</li>
+				<li>ATS contact C3</li>
+				<li>Customer calls in, and C3 responds to the customer with an answer</li>
+				<li>Developers deploy fix</li>
+			</ul>
+		</li>
+		<li>
+			<h3> ELK </h3>
+			<h4>What is it?</h4>
+			<ul>
+				<li>
+					<h5>Elastic Search</h5>
+					<ul>
+						<li>Can be used as a document based NoSQL datastore, as one stop shop for storing searching and statistics</li>
+						<li>Out of the box horizontally scalable</li>
+						<li>Has  HTTP Rest query interface - JSON</li>
+					</ul>
+				</li>
+				<li>
+					<h5>LogStash</h5>
+					<ul>
+						<li>A tool used to collect logs, parse them, store them for searching</li>
+						<li>Works with n number of input/output, easy to configure</li>
+						<li>Allows for unstructured JSON logs, creates a dynamic schema that it is good for logs</li>
+					</ul>
+				</li>
+				<li>
+					<h5>Kibana</h5>
+					<ul>
+						<li>A dashboard that lets you analyze your logs</li>
+						<li>Make your own dashboard using the Lucene search query</li>
+						<li>Making your own dashboard</li>
+					</ul>
+				</li>
+			</ul>
+			<h4>Setting it up -> Ashish to give demo</h4>
+			<h5>OUR ELK Setup</h5>
+			<img src="images/ELKSETUP.png" />
+			<h5>Procedure</h5>
+			<ul>
+				<li>NEED TO ADD LINK TO CONFLUENCE PAGE</li>
+			</ul>
+			<h5>Setting up the index</h5>
+			<div>Need to show configuration of how logstash is setup</div>
+			<h5>How the logs are parsed and indexed</h5>
+			<div>logstash-overview.png</div>
+			<h5>Setting up Kibana -> install and forget.</h5>
+		</li>
+		<li>
+			<h3>WSB Monitor App</h3>
+			<ul>
+				<li>Monitor Admin App -> Showing how it works</li>
+				<li>Give demo of getting alert from threshold lowering</li>
+				<li>Email to show with new logs</li>
+				<li>APIs</li>
+				<li>Our Kibana Dashboard tied into the monitor app</li>
+			</ul>
+		</li>
+		<li>
+			<h3>Next steps</h3>
+		</li>
 	</ol>	
 </div>
 <script src="js/impress.js"></script>
