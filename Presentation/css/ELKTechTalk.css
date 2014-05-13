@@ -87,13 +87,13 @@ body.impress-group-module {
 }
 
 body.impress-group-problem {
-    background-color: #F0C954;
+    background-color: #FEEAFF; /* #F0C954;*/
     color: #000000;
 }
 
 
 body.impress-group-intro {
-	background-color: #F0C954;
+	background-color: #FEEAFF;
     color: #000000;
 }
 
@@ -287,10 +287,21 @@ div.line{
     text-align:center;
 }
 
+.topictitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight:bold;
+    font-size: 1.75em;
+}
+
+.topicsubtitle {
+    margin-left: 10px;
+    font-weight:lighter;
+}
+
 #start .title {
 	position: absolute;
-	top: -50px;
-	font-size: 2.25em;
+	top: -200px;
+	font-size: 2.75em;
     text-align: center;
 }
 
@@ -1288,7 +1299,7 @@ div.line{
 
  .block {
     border: 2px solid black;
-    background-color: #FFB740;
+    background-color: #FFFEEB;
     margin:5px;
     text-align: center;
  }

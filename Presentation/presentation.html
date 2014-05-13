@@ -21,10 +21,10 @@
  <div id="impress">
 
     <div id="start" class="step" data-substeps="2" data-x="0" data-y="0" data-scale="3">
-        <div class="title">Monitoring Logs with Elastic Search</div>
+        <div class="title" style="">Monitoring Logs<br/> with <br/> Elasticsearch</div>
     </div>
     <div id="who" class="step only-group-who" data-group="who" data-x="0" data-y="0" data-rotate-x="0" data-rotate-y="-90">
-        <div style="position: absolute; top: -240px; left:200px;text-align:center;">
+        <div style="position: absolute; top: -240px; left:50px;text-align:center;">
             <div style="font-size: 1.52em;">We are Acme Labs part of WSB</div>
             <div><img style='width:150px' src='images/acmelabs.png'/></div>
             <div>Ashish Shubham</div>
@@ -34,12 +34,12 @@
     </div>
 
     <div id="problem" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="0">
-     <div class="title">What's the problem?</div>
+     <div class="topictitle">What's the problem?</div>
      <div>Well, problems are not detected until our customers detect them first.</div>
  </div>
 
  <div id="currentScenario" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="1000">
-   <div class="title">Current Scenario:</div>
+   <div class="topictitle">Current Scenario:</div>
    <div class="block">Customers encounter an issue</div>
    <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>
    <div class="block">A select few customers call into C3</div>
@@ -52,7 +52,7 @@
 </div>
 
 <div id="idealScenario" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="2000">
-   <div class="title">Ideal Scenario:</div>
+   <div class="topictitle">Ideal Scenario:</div>
    <div class="block">Monitor finds an issue</div>
    <div class="arrow"><img class="arrow" src="images/arrow.png"/></div>
    <div class="block">Appropriate team gets notified</div>
@@ -65,34 +65,36 @@
 </div>
 
 <div id="currentTools" class="step only-present smoothfade" data-group="problem" data-x="2500" data-y="3000">
-   <div class="title">Current Tools: Starfield Logs</div>
+   <div class="topictitle" style="font-size: 1.65em;">Current Tools:
+       <span class="topicsubtitle">Starfield Logs</span>
+   </div>
    <div>
        <img src="images/starfield_search.png" style="width:250px"/>
        <img src="images/starfield_details.png" style="width:250px"/>
        <img src="images/starfield_aggregation.png" style="width:250px"/>
    </div>
-   <div style="text-align:center;"><a href="http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx" target="_blank" style="font-size:x-small;">http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx</div>
+   <div style="text-align:center;"><a href="http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx" target="_blank" style="font-size:x-small;">http://starfieldlog.prod.mesa1.gdg/LogSearch.aspx</a></div>
 </div>
 
 <div id="problemWithTools" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="4000">
-   <div class="title">Problem with these Tools:</div>
+   <div class="topictitle">Problem with these Tools:</div>
    <ul>
-    <li>They dont alert new issues to the team</li>
-    <li>A lot of noise to filter through</li>
-    <li>Limited filters</li>
+    <li>No alerting mechanism</li>
     <li>Cannot customize without code change</li>
+    <li>A lot of noise </li>
+    <li>Limited filters</li>
 </ul>
 </div>
 
 <div id="idealSolution" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="5000">
-   <div class="title">Ideal Solution:</div>
+   <div class="topictitle">Ideal Solution:</div>
    <div>
     <img src="images/gliffy.png" style="width:100%"/>
 </div>
 </div>
 
-<div id="whatsOutThere" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="6000">
-   <div class="title">What is out there:</div>
+<div id="whatsOutThere" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="-1000">
+   <div class="topictitle">What is out there:</div>
    <ul>
     <li>Elastic Search</li>
     <li>Log Stash</li>
@@ -104,87 +106,96 @@
 </ul>
 </div>
 
-<div id="ElasticSearch" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">What is Elastic Search:</div>
+<div id="ElasticSearch" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="0">
+   <div class="topictitle">Elastic Search:</div>
    <ul>
-    <li>Can be used as a document based NoSQL datastore, as one stop shop for storing searching and statistics</li>
+    <li>A document based NoSQL datastore</li>
     <li>Out of the box horizontally scalable</li>
-    <li>Has  HTTP Rest query interface - JSON</li>
+    <li>Has HTTP Rest query interface - JSON</li>
 </ul>
 </div>
 
-<div id="LogStash" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">What is Log Stash:</div>
+<div id="LogStash" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="1000">
+   <div class="topictitle">Log Stash:</div>
+   <div><img src="images/logstash-overview.png" style="width:600px;"/></div>
    <ul>
-    <li>A tool used to collect logs, parse them, store them for searching</li>
-    <li>Works with n number of input/output, easy to configure</li>
-    <li>Allows for unstructured JSON logs, creates a dynamic schema that it is good for logs</li>
+    <li>Use it to collect, parse, and store logs for searching</li>
+    <li>Works with any number of inputs/outputs</li>
+    <li>Creates a dynamic schema from unstructured JSON logs</li>
 </ul>
 </div>
-<div id="LogStash" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">Log Stash:</div>
-<div><img src="images/logstash-overview.png" style="width:600px;"/></div>
-</div>
 
-<div id="Kibana" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">What is Kibana:</div>
+<div id="Kibana" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="3000">
+   <div class="topictitle">Kibana:</div>
    <ul>
-    <li>A dashboard that lets you analyze your logs</li>
-    <li>Make your own dashboard using the Lucene search query</li>
-    <li>Making your own dashboard</li>
+    <li>Create your own dashboard</li>
+    <li>Analyze your logs</li>
+    <li><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">WSB Client Side Dashboard</a> </li>
 </ul>
 </div>
 
-<div id="ELKServerSetup" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">Our ELK Server Setup:</div>
+<div id="ELKServerSetup" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="4000">
+   <div class="topictitle">Our ELK Server Setup:</div>
    <div style="text-align: center">
-    <img src="images/ELK_SETUP.png" style="width:1000px;"/>
+    <img src="images/elksetup1.png" width="500px"/>
 </div>
 </div>
 
-<div id="WSBMonitorAPI" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">API to push logs:</div>
-   <div><a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">http://wsbmonitor.int.godaddy.com/admin</a></div>
-   <div><a href="https://confluence.int.godaddy.com/display/EchoITInf/Logstash+Logging+API" target="_blank">https://confluence.int.godaddy.com/display/EchoITInf/Logstash+Logging+API</a> </div>
+<div id="WSBMonitorAPI" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="5000">
+   <div class="topictitle">WSB Monitor logging API:</div>
+   <div>
+      <a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">WSB Monitor App</a>
+   </div>
+   <div>
+      <a href="https://confluence.int.godaddy.com/display/EchoITInf/Logstash+Logging+API" target="_blank">WSB Monitor API Confluence Page</a>
+    </div>
 </div>
 
-<div id="settingUpELK" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">ELK Sample App Setup:</div>
+<div id="settingUpELK" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="6000">
+   <div class="topictitle">ELK Sample App Setup:</div>
    <ul>
     <li>ACME Labs Sample App</li>
-    <li><a href="http://www.json-generator.com/">http://www.json-generator.com/</a>  </li>
+    <li><a href="http://www.json-generator.com/" target="_blank">http://www.json-generator.com/</a>  </li>
 </ul>
 </div>
 
-<div id="creatingYourOwnDashboard" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">Creating your own Dashboard:</div>
-   <div><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard</a></div>
+<div id="creatingYourOwnDashboard" class="step only-present smoothfade" data-group="intro" data-x="6000" data-y="7000">
+   <div class="topictitle">Creating your own Dashboard:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">WSB Clientside Dashboard</a></div>
 </div>
 
-<div id="ELKPerfomance" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">Perfomance of our Setup:</div>
+<div id="WSBMonitorApp" class="step only-present smoothfade" data-group="intro" data-x="8000" data-y="0">
+   <div class="topictitle">WSB Monitor App:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/" target="_blank">WSB Monitor App</a></div>
+</div>
+
+<div id="WSBMonitorAdminApp" class="step only-present smoothfade" data-group="intro" data-x="8000" data-y="1000">
+   <div class="topictitle">WSB  Monitor Admin App:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">WSB Monitor Admin App</a></div>
+</div>
+
+<div id="monitoringLogs" class="step only-present smoothfade" data-group="intro" data-x="8000" data-y="2000">
+   <div class="topictitle">Monitoring Logs:</div>
+   <div><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">WSB Clientside Dashboard</a></div>
+</div>
+
+<div id="adaptiveThresholds" class="step only-present smoothfade" data-group="intro" data-x="8000" data-y="3000">
+   <div class="topictitle">Adaptive Thresholds:</div>
+   <div>
+    <img src="images/windows.png" style="width:300px;">
+    <img src="images/table.png" style="width:300px;">
+   </div>
+</div>
+
+<div id="ELKPerfomance" class="step only-present smoothfade" data-group="intro" data-x="8000" data-y="4000">
+   <div class="topictitle">Perfomance of our Setup:</div>
    <ul>
     <li>Load Test Demo</li>
 </ul>
 </div>
 
-<div id="WSBMonitorApp" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">WSB Monitor App:</div>
-   <div><a href="http://wsbmonitor.int.godaddy.com/" target="_blank">http://wsbmonitor.int.godaddy.com/</a></div>
-</div>
-
-<div id="WSBMonitorAdminApp" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">WSB  Monitor Admin App:</div>
-   <div><a href="http://wsbmonitor.int.godaddy.com/admin" target="_blank">http://wsbmonitor.int.godaddy.com/admin</a></div>
-</div>
-
-<div id="monitoringLogs" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">Monitoring Logs:</div>
-   <div><a href="http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard" target="_blank">http://wsbmonitor.int.godaddy.com/logs/#/dashboard/elasticsearch/WSB%20Client%20Dashboard</a></div>
-</div>
-
-<div id="whatsNext" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">What is next:</div>
+<div id="whatsNext" class="step only-present smoothfade" data-group="intro" data-x="-2000" data-y="1000">
+   <div class="topictitle">What is next:</div>
    <ul>
     <li>Migrate logs to Hadoop</li>
     <li>Use corporate Elastic Search</li>
@@ -193,12 +204,12 @@
 </ul>
 </div>
 
-<div id="QandA" class="step only-present smoothfade" data-group="intro" data-x="2500" data-y="0">
-   <div class="title">Q &amp; A:</div>
+<div id="QandA" class="step only-present smoothfade" data-group="intro" data-x="-2000" data-y="2000">
+   <div class="topictitle">Q &amp; A:</div>
 </div>
 
-<div id="resources" class="step only-present" data-group="intro" data-x="0" data-y="1500">
-  <div class="title">Resources:</div>
+<div id="resources" class="step only-present" data-group="intro" data-x="-2000" data-y="3000">
+  <div class="topictitle">Resources:</div>
   <ul>
    <li><a href="http://www.elasticsearch.org/" target="_blank">Elasticsearch.org</a> </li>
    <li><a href="http://logstash.net/" target="_blank">Logstash.net</a></li>
@@ -212,9 +223,6 @@
 
 </div>
 
-
-<div id="overview" class="stepno" data-x="0" data-y="-500" data-scale="6"></div>
-</div>
 
 <script src="js/impress.js"></script>
 <script src="js/ELKTechTalk.js"></script>
