@@ -1,0 +1,15 @@
+{
+    "name": "node-pc-monitor",
+    "version": "0.0.1",
+  
+    "dependencies": {
+        
+        "express": "3.x",
+        "request": "2.27.0",
+        "node-pc-monitor-client" : "git+ssh://git@github.secureserver.net:PC/node-pc-monitor-client.git",
+        "ejs": "0.8.5",
+        "body-parser": "1.x"
+
+    }
+   
+}
